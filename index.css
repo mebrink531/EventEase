@@ -89,3 +89,28 @@ input[type="checkbox"] {
   margin-right: 10px;
   transform: scale(1.2);
 }
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #2E7D32;
+  cursor: pointer;
+}
+
+.bottom-nav button:hover {
+  color: #1B5E20;
+}
+
