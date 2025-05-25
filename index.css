@@ -1,70 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
   margin: 20px;
+  color: #333;
 }
 
 .container {
   width: 90%;
   max-width: 400px;
   margin: auto;
+  padding: 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
+  color: #2E7D32;
 }
 
 .event-card {
   background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
+  padding: 20px;
+  margin: 28px 0;
+  border-radius: 12px;
   position: relative;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 button {
-  padding: 5px 10px;
-  margin-top: 10px;
+  padding: 10px 16px;
+  margin-top: 20px;
+  background-color: #2E7D32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1B5E20;
 }
 
 .popup {
   display: none;
   position: absolute;
-  top: 60px;
-  left: 10px;
+  top: 80px;
+  left: 20px;
   background-color: #fff;
-  padding: 10px;
+  padding: 16px;
   width: 250px;
   border: 1px solid #ccc;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
-  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
   z-index: 10;
 }
 
 .progress-bar {
   width: 100%;
-  background: #ddd;
+  background: #e0e0e0;
   height: 10px;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .fill {
-  background: #9c8cf9;
+  background: #2E7D32;
   height: 10px;
   border-radius: 5px;
 }
 
 .section {
-  margin: 20px 0;
+  margin: 28px 0;
   background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
 .status {
-  font-weight: bold;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
 }
