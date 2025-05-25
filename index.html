@@ -3,43 +3,33 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Event Details</title>
+  <title>Event Ease - Home</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
-    <a href="index.html">&larr; Back</a>
-    <h2 id="event-title">Event Details</h2>
-    <p id="event-date"></p>
+    <h1>EVENT EASE</h1>
+    <h2>HOME</h2>
 
-    <div class="section">
-      <h3>RSVP Tracker</h3>
-      <ul id="rsvp-list">
-        <li>Amanda - <span class="status">Yes</span></li>
-        <li>James - <span class="status">No</span></li>
-        <li>Olivia - <span class="status">No Response</span></li>
-      </ul>
+    <div class="event-card" onmouseover="showBudget('Birthday Party')" onmouseout="hideBudget()">
+      <h3>Birthday Party</h3>
+      <button onclick="viewEvent('Birthday Party')">View Event</button>
+      <div id="popup-birthday" class="popup">
+        <p>Budget: $250</p>
+        <div class="progress-bar"><div class="fill" style="width: 20%"></div></div>
+      </div>
     </div>
 
-    <div class="section">
-      <h3>Task List</h3>
-      <ul>
-        <li><input type="checkbox" id="cake"/> Order Cake</li>
-        <li><input type="checkbox" id="invites"/> Send Invites</li>
-      </ul>
+    <div class="event-card" onmouseover="showBudget('Wedding')" onmouseout="hideBudget()">
+      <h3>Wedding</h3>
+      <button onclick="viewEvent('Wedding')">View Event</button>
+      <div id="popup-wedding" class="popup">
+        <p>Budget: $7,000</p>
+        <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+      </div>
     </div>
   </div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const eventName = params.get("event");
-    const eventDateMap = {
-      "Birthday Party": "July 10, 2025",
-      "Wedding": "August 10, 2025"
-    };
-
-    document.getElementById("event-title").textContent = eventName;
-    document.getElementById("event-date").textContent = eventDateMap[eventName];
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
