@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Details</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">&larr; Back</a>
+    <h2 id="event-title">Event Details</h2>
+    <p id="event-date"></p>
+
+    <div class="section">
+      <h3>RSVP Tracker</h3>
+      <ul id="rsvp-list">
+        <li>Amanda - <span class="status">Yes</span></li>
+        <li>James - <span class="status">No</span></li>
+        <li>Olivia - <span class="status">No Response</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Task List</h3>
+      <ul>
+        <li><input type="checkbox" id="cake"/> Order Cake</li>
+        <li><input type="checkbox" id="invites"/> Send Invites</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const eventName = params.get("event");
+    const eventDateMap = {
+      "Birthday Party": "July 10, 2025",
+      "Wedding": "August 10, 2025"
+    };
+
+    document.getElementById("event-title").textContent = eventName;
+    document.getElementById("event-date").textContent = eventDateMap[eventName];
+  </script>
+</body>
+</html>
