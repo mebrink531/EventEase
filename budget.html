@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>Budget</h2>
+
+    <div class="section">
+      <h3>Birthday Party</h3>
+      <p>July 10, 2025</p>
+      <p>$250</p>
+      <div class="progress-bar"><div class="fill" style="width: 20%"></div></div>
+    </div>
+
+    <div class="section">
+      <h3>Wedding</h3>
+      <p>August 10, 2025</p>
+      <p>$7,000</p>
+      <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <button onclick="location.href='index.html'">🏠</button>
+    <button onclick="location.href='event.html?event=Birthday%20Party'">📄</button>
+    <button onclick="location.href='event.html?event=Birthday%20Party#rsvp'">📋</button>
+    <button onclick="location.href='budget.html'">💰</button>
+  </div>
+</body>
+</html>
